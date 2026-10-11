@@ -1,0 +1,34 @@
+{
+  "name": "auto-gamemode",
+  "version": "1.0.0",
+  "description": "Автоматически возвращает установленный игровой режим, если кто-то его сменил.",
+  "main": "index.js",
+  "author": "BlockMine",
+  "botpanel": {
+    "icon": "ShieldCheck",
+    "categories": [
+      "Автоматизация",
+      "Утилиты"
+    ],
+    "settings": {
+      "targetGamemode": {
+        "type": "select",
+        "label": "Желаемый игровой режим",
+        "description": "Режим, который бот будет возвращать себе обратно.",
+        "options": [
+          { "value": "1", "label": "Креатив (1)" },
+          { "value": "0", "label": "Выживание (0)" },
+          { "value": "3", "label": "Наблюдатель (3)" },
+          { "value": "2", "label": "Приключенческий (2)" }
+        ],
+        "default": "1"
+      },
+      "delayMs": {
+        "type": "number",
+        "label": "Задержка перед сменой (мс)",
+        "description": "Пауза перед отправкой команды /gm.",
+        "default": 1000
+      }
+    }
+  }
+}
